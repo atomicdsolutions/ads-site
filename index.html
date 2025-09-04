@@ -61,7 +61,19 @@
                 <li><a href="about.html" class="text-gray-800 dark:text-gray-200 font-medium transition-all duration-300 px-2 py-1 rounded-md hover:bg-blue-100 dark:hover:bg-blue-900/20" onmouseover="this.style.color='#479FF8'" onmouseout="this.style.color=''">About</a></li>
                 <li><a href="#contact" class="text-gray-800 dark:text-gray-200 font-medium transition-all duration-300 px-2 py-1 rounded-md hover:bg-blue-100 dark:hover:bg-blue-900/20" onmouseover="this.style.color='#479FF8'" onmouseout="this.style.color=''">Contact</a></li>
             </ul>
+            <div class="hamburger md:hidden flex flex-col cursor-pointer">
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-200 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-200 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-200 transition-all duration-300"></span>
+            </div>
         </nav>
+        <!-- Mobile Menu -->
+        <ul class="nav-menu-mobile md:hidden bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-800/50 py-4 px-8 space-y-4 hidden">
+            <li><a href="#home" class="block font-medium hover:transition-colors duration-300" style="color: #6B7280;" onmouseover="this.style.color='#479FF8'" onmouseout="this.style.color='#6B7280'">Home</a></li>
+            <li><a href="services.html" class="block font-medium hover:transition-colors duration-300" style="color: #6B7280;" onmouseover="this.style.color='#479FF8'" onmouseout="this.style.color='#6B7280'">Services</a></li>
+            <li><a href="about.html" class="block font-medium hover:transition-colors duration-300" style="color: #6B7280;" onmouseover="this.style.color='#479FF8'" onmouseout="this.style.color='#6B7280'">About</a></li>
+            <li><a href="#contact" class="block font-medium hover:transition-colors duration-300" style="color: #6B7280;" onmouseover="this.style.color='#479FF8'" onmouseout="this.style.color='#6B7280'">Contact</a></li>
+        </ul>
     </header>
 
     <main>
@@ -208,9 +220,158 @@
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="py-20 bg-gray-50 dark:bg-gray-800 dark-mode-transition">
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-gradient-to-r from-blue-50 to-green-50 dark:from-gray-800 dark:to-gray-700 dark-mode-transition">
             <div class="max-w-6xl mx-auto px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">What Our Clients Say</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Real feedback from organizations we've helped transform their technology experience.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: rgba(71, 159, 248, 0.1);">
+                                <span class="text-xl font-bold" style="color: #479FF8;">JM</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900 dark:text-gray-100">Jennifer Martinez</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Executive Director, Hearts & Hands Nonprofit</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed italic mb-4">
+                            "Finally, an easy-to-work-with IT company that treats us like family, not just another ticket number. Our systems have never been more reliable."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-400">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">5/5 stars</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: rgba(129, 214, 83, 0.1);">
+                                <span class="text-xl font-bold" style="color: #81D653;">DR</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900 dark:text-gray-100">David Rodriguez</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">CEO, GrowthTech Solutions</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed italic mb-4">
+                            "We cut our IT costs by 35% while actually improving our uptime. AtomicD's proactive approach caught problems before they became disasters."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-400">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">5/5 stars</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: rgba(94, 181, 183, 0.1);">
+                                <span class="text-xl font-bold" style="color: #5EB5B7;">SK</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900 dark:text-gray-100">Sarah Kim</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Operations Manager, Community Health Alliance</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed italic mb-4">
+                            "From grant compliance to HIPAA requirements, they handle everything seamlessly. We can focus on serving our community instead of fighting with technology."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-400">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">5/5 stars</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Trust Section -->
+        <section class="py-20 bg-white dark:bg-gray-900 relative overflow-hidden dark-mode-transition">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, #479FF8 0%, transparent 50%), radial-gradient(circle at 75% 75%, #81D653 0%, transparent 50%);"></div>
+            </div>
+            
+            <div class="relative max-w-6xl mx-auto px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">Proven Results Since 2008</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">15+ years of delivering measurable results for organizations worldwide.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                    <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/30 rounded-xl">
+                        <div class="text-4xl md:text-5xl font-bold mb-2" style="color: #479FF8;">15+</div>
+                        <div class="text-gray-700 dark:text-gray-300 font-medium">Years Experience</div>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/30 rounded-xl">
+                        <div class="text-4xl md:text-5xl font-bold mb-2" style="color: #81D653;">200+</div>
+                        <div class="text-gray-700 dark:text-gray-300 font-medium">Happy Clients</div>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/20 dark:to-teal-800/30 rounded-xl">
+                        <div class="text-4xl md:text-5xl font-bold mb-2" style="color: #5EB5B7;">99.9%</div>
+                        <div class="text-gray-700 dark:text-gray-300 font-medium">Uptime SLA</div>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/30 rounded-xl">
+                        <div class="text-4xl md:text-5xl font-bold mb-2" style="color: #479FF8;">40%</div>
+                        <div class="text-gray-700 dark:text-gray-300 font-medium">Cost Reduction</div>
+                    </div>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-900 dark:text-gray-100">Trusted by Organizations Worldwide</h3>
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-6 opacity-60">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-6 h-6" style="color: #81D653;" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span class="font-medium text-gray-700 dark:text-gray-300">Nonprofits</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-6 h-6" style="color: #479FF8;" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span class="font-medium text-gray-700 dark:text-gray-300">Growing Businesses</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-6 h-6" style="color: #5EB5B7;" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span class="font-medium text-gray-700 dark:text-gray-300">Healthcare Organizations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800 dark-mode-transition relative overflow-hidden">
+            <!-- Tech Background Graphics -->
+            <div class="absolute inset-0 opacity-3 pointer-events-none">
+                <svg class="absolute top-8 left-8 w-24 h-24" style="color: #479FF8;" fill="none" stroke="currentColor" stroke-width="0.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+                </svg>
+                <svg class="absolute top-8 right-8 w-20 h-20" style="color: #81D653;" fill="none" stroke="currentColor" stroke-width="0.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                </svg>
+                <svg class="absolute bottom-8 left-8 w-28 h-28" style="color: #5EB5B7;" fill="none" stroke="currentColor" stroke-width="0.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                </svg>
+                <svg class="absolute bottom-8 right-8 w-24 h-24" style="color: #479FF8;" fill="none" stroke="currentColor" stroke-width="0.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+            </div>
+            <div class="relative max-w-6xl mx-auto px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">Comprehensive IT Services</h2>
                     <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">From 24/7 monitoring to cybersecurity compliance, we've got every aspect of your technology covered.</p>
@@ -437,6 +598,40 @@
             
             startX = null;
             startY = null;
+        });
+
+        // Mobile Navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navMenuMobile = document.querySelector('.nav-menu-mobile');
+
+        if (hamburger && navMenuMobile) {
+            hamburger.addEventListener('click', function() {
+                // Toggle hamburger animation
+                const bars = hamburger.querySelectorAll('span');
+                bars[0].classList.toggle('rotate-45');
+                bars[0].classList.toggle('translate-y-2');
+                bars[1].classList.toggle('opacity-0');
+                bars[2].classList.toggle('-rotate-45');
+                bars[2].classList.toggle('-translate-y-2');
+                
+                // Toggle mobile menu visibility
+                navMenuMobile.classList.toggle('hidden');
+            });
+        }
+
+        // Close mobile menu when clicking on nav links
+        document.querySelectorAll('.nav-menu-mobile a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (navMenuMobile) {
+                    navMenuMobile.classList.add('hidden');
+                    
+                    // Reset hamburger animation
+                    const bars = hamburger.querySelectorAll('span');
+                    bars[0].classList.remove('rotate-45', 'translate-y-2');
+                    bars[1].classList.remove('opacity-0');
+                    bars[2].classList.remove('-rotate-45', '-translate-y-2');
+                }
+            });
         });
     </script>
 </body>
