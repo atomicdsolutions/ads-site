@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtomicD Solutions - IT Consulting Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#479FF8',
+                        'brand-green': '#81D653',
+                        'brand-teal': '#5EB5B7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-slide {
+            display: none;
+        }
+        
+        .hero-slide.active {
+            display: block;
+        }
+        
+        .dark-mode-transition {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="dark-mode-transition">
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" class="fixed top-24 right-4 z-50 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600">
+        <svg class="w-5 h-5 text-gray-800 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path class="sun-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            <path class="moon-icon hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+    </button>
+
+    <header class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg fixed top-0 w-full z-50 border-b border-gray-100 dark:border-gray-800 dark-mode-transition">
+        <nav class="flex justify-between items-center px-8 py-4 max-w-6xl mx-auto">
+            <div class="logo">
+                <h1 class="text-2xl font-bold" style="color: #479FF8;">AtomicD Solutions</h1>
+            </div>
+            <ul class="nav-menu hidden md:flex space-x-8">
+                <li><a href="#home" class="text-gray-800 dark:text-gray-200 font-medium transition-all duration-300 px-2 py-1 rounded-md hover:bg-blue-100 dark:hover:bg-blue-900/20" onmouseover="this.style.color='#479FF8'" onmouseout="this.style.color=''">Home</a></li>
+                <li><a href="services.html" class="text-gray-800 dark:text-gray-200 font-medium transition-all duration-300 px-2 py-1 rounded-md hover:bg-blue-100 dark:hover:bg-blue-900/20" onmouseover="this.style.color='#479FF8'" onmouseout="this.style.color=''">Services</a></li>
+                <li><a href="about.html" class="text-gray-800 dark:text-gray-200 font-medium transition-all duration-300 px-2 py-1 rounded-md hover:bg-blue-100 dark:hover:bg-blue-900/20" onmouseover="this.style.color='#479FF8'" onmouseout="this.style.color=''">About</a></li>
+                <li><a href="#contact" class="text-gray-800 dark:text-gray-200 font-medium transition-all duration-300 px-2 py-1 rounded-md hover:bg-blue-100 dark:hover:bg-blue-900/20" onmouseover="this.style.color='#479FF8'" onmouseout="this.style.color=''">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative text-white h-screen flex items-center" style="background: linear-gradient(135deg, #479FF8 0%, #5EB5B7 35%, #81D653 100%);">
+            <div class="absolute inset-0 bg-gray-900 opacity-0 dark:opacity-90 transition-opacity duration-300"></div>
+            <div class="hero-carousel relative z-10 w-full">
+                <!-- Slide 1 -->
+                <div class="hero-slide active max-w-6xl mx-auto px-8">
+                    <div class="text-center max-w-4xl mx-auto">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Reduce IT Costs 40% & Guarantee 99.9% Uptime</h1>
+                        <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
+                            Simple IT solutions that actually save money while keeping your systems running flawlessly.
+                        </p>
+                        <div class="mb-6">
+                            <a href="#contact" class="bg-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 inline-block" style="color: #479FF8;">Get Free Cost Analysis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section class="py-20 bg-white dark:bg-gray-900 dark-mode-transition">
+            <div class="max-w-6xl mx-auto px-8">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-900 dark:text-gray-100">IT Services for Nonprofits & Growing Businesses</h2>
+                <p class="text-xl text-center text-gray-600 dark:text-gray-400 mb-16 max-w-3xl mx-auto leading-relaxed">You're too busy running your mission to worry about servers, security, and software updates. AtomicD Solutions makes technology easy.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(129, 214, 83, 0.1);">
+                            <svg class="w-8 h-8" style="color: #81D653;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">IT Support for Nonprofits</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Every dollar matters. Get enterprise-level nonprofit IT support without the enterprise price tag.</p>
+                    </div>
+
+                    <div class="text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(71, 159, 248, 0.1);">
+                            <svg class="w-8 h-8" style="color: #479FF8;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">IT Consulting for Growing Businesses</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Scale fast without IT headaches. Business IT solutions that grow with you from 10 to 100+ employees.</p>
+                    </div>
+
+                    <div class="text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(94, 181, 183, 0.1);">
+                            <svg class="w-8 h-8" style="color: #5EB5B7;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">IT Solutions for SMB</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">IT support for organizations with 20+ employees that doesn't slow you down or drain your budget.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800 dark-mode-transition">
+            <div class="max-w-6xl mx-auto px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">Comprehensive IT Services</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">From 24/7 monitoring to cybersecurity compliance, we've got every aspect of your technology covered.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform duration-300" style="border-left: 4px solid #479FF8;">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background-color: rgba(71, 159, 248, 0.1);">
+                            <svg class="w-8 h-8" style="color: #479FF8;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">24/7 Managed IT Services</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">Comprehensive managed IT services with proactive monitoring and maintenance. 99.9% uptime SLA.</p>
+                        <div class="text-sm font-semibold" style="color: #479FF8;">✓ 2-hour response time</div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform duration-300" style="border-left: 4px solid #81D653;">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background-color: rgba(129, 214, 83, 0.1);">
+                            <svg class="w-8 h-8" style="color: #81D653;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Cybersecurity & Compliance</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">SOC 2, HIPAA, and nonprofit compliance made simple. Advanced threat protection and security training.</p>
+                        <div class="text-sm font-semibold" style="color: #81D653;">✓ Compliance reporting included</div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg text-center hover:-translate-y-2 transition-transform duration-300" style="border-left: 4px solid #5EB5B7;">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background-color: rgba(94, 181, 183, 0.1);">
+                            <svg class="w-8 h-8" style="color: #5EB5B7;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Mobile Device Management</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">Comprehensive MDM and UEM solutions. Secure BYOD policies, remote device control, and enterprise mobility management.</p>
+                        <div class="text-sm font-semibold" style="color: #5EB5B7;">✓ BYOD & remote work ready</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white dark:bg-gray-900 dark-mode-transition">
+            <div class="max-w-4xl mx-auto px-8 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">Ready to Make Your IT Simple?</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">Ready to experience stress-free IT? Let's talk about your needs and see how we can help.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Email Us</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Send us a message about your IT needs</p>
+                        <a href="mailto:info@atomicdsolutions.com" class="font-semibold hover:underline" style="color: #479FF8;">info@atomicdsolutions.com</a>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Call Us</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Speak directly with our team</p>
+                        <a href="tel:5551234567" class="font-semibold hover:underline" style="color: #479FF8;">(555) 123-4567</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="color: #81D653;">Contact Info</h4>
+                    <p class="mb-2 opacity-80">Email: info@atomicdsolutions.com</p>
+                    <p class="opacity-80">Phone: (555) 123-4567</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="color: #81D653;">Services</h4>
+                    <p class="mb-2 opacity-80">Managed IT Services</p>
+                    <p class="mb-2 opacity-80">Mobile Device Management</p>
+                    <p class="opacity-80">Cloud Services & Migrations</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" style="color: #81D653;">Why Choose AtomicD</h4>
+                    <p class="mb-2 opacity-80">Lightning-Fast Support</p>
+                    <p class="mb-2 opacity-80">Security & Compliance First</p>
+                    <p class="opacity-80">True Partnership Approach</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="opacity-70">&copy; 2024 AtomicD Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple dark mode functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const sunIcon = darkModeToggle.querySelector('.sun-icon');
+        const moonIcon = darkModeToggle.querySelector('.moon-icon');
+        
+        // Check for saved dark mode preference
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        
+        if (isDarkMode) {
+            document.documentElement.classList.add('dark');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+        
+        // Dark mode toggle
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', isDark);
+            
+            if (isDark) {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        });
+
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

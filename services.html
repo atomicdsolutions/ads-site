@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Services - AtomicD Solutions | Managed IT, MDM, Cloud Services & More</title>
+    <meta name="description" content="Comprehensive IT services for nonprofits and growing businesses. Managed IT services, mobile device management (MDM), unified endpoint management (UEM), cloud migrations, cybersecurity, and specialized solutions for regulated organizations.">
+    <meta name="keywords" content="managed IT services, mobile device management, MDM, unified endpoint management, UEM, IT support services, cloud migration services, cybersecurity services, nonprofit IT services, HIPAA compliance IT, data backup and recovery, help desk support, IT consulting services, endpoint security, BYOD management, remote device management">
+    <meta property="og:title" content="IT Services - AtomicD Solutions">
+    <meta property="og:description" content="Technology that empowers. IT made simple, secure, and effective for nonprofits, growing businesses, and regulated organizations.">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#479FF8',
+                        'brand-green': '#81D653',
+                        'brand-teal': '#5EB5B7',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+                        'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        bounceGentle: {
+                            '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+                            '40%': { transform: 'translateY(-10px)' },
+                            '60%': { transform: 'translateY(-5px)' },
+                        },
+                        pulseSoft: {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '0.8' },
+                            '50%': { transform: 'scale(1.05)', opacity: '1' },
+                        },
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'mesh-gradient': 'linear-gradient(135deg, var(--tw-gradient-stops)), radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 50%)',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(71, 159, 248, 0.3)',
+                        'glow-green': '0 0 20px rgba(129, 214, 83, 0.3)',
+                        'glow-teal': '0 0 20px rgba(94, 181, 183, 0.3)',
+                        'inner-glow': 'inset 0 2px 4px rgba(255,255,255,0.1)',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .mesh-bg {
+            background: linear-gradient(135deg, #479FF8 0%, #5EB5B7 35%, #81D653 100%);
+            background-size: 400% 400%;
+            animation: meshMove 8s ease infinite;
+        }
+        
+        @keyframes meshMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .dark-mode-transition {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .dark .card-hover:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #479FF8, #5EB5B7, #81D653);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #479FF8, #5EB5B7);
+            border-radius: 4px;
+        }
+        
+        .dark ::-webkit-scrollbar-track {
+            background: #2d3748;
+        }
+    </style>
+</head>
+<body class="dark-mode-transition">
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" class="fixed top-24 right-4 z-50 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600 group hover:scale-110">
+        <svg class="w-5 h-5 text-gray-800 dark:text-gray-200 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path class="sun-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            <path class="moon-icon hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+    </button>
+
+    <header class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg dark:shadow-gray-800/50 fixed top-0 w-full z-50 border-b border-gray-100 dark:border-gray-800 dark-mode-transition">
+        <nav class="flex justify-between items-center px-8 py-4 max-w-6xl mx-auto">
+            <div class="logo">
+                <h1 class="text-brand-blue text-2xl font-bold">AtomicD Solutions</h1>
+            </div>
+            <ul class="nav-menu hidden md:flex space-x-8">
+                <li><a href="index.html" class="text-gray-800 font-medium hover:text-brand-blue transition-colors duration-300">Home</a></li>
+                <li><a href="services.html" class="text-brand-blue font-medium hover:text-brand-blue transition-colors duration-300">Services</a></li>
+                <li><a href="about.html" class="text-gray-800 font-medium hover:text-brand-blue transition-colors duration-300">About</a></li>
+                <li><a href="#contact" class="text-gray-800 font-medium hover:text-brand-blue transition-colors duration-300">Contact</a></li>
+            </ul>
+            <div class="hamburger md:hidden flex flex-col cursor-pointer">
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <ul class="nav-menu-mobile md:hidden bg-white shadow-md py-4 px-8 space-y-4 hidden">
+            <li><a href="index.html" class="block text-gray-800 font-medium hover:text-brand-blue transition-colors duration-300">Home</a></li>
+            <li><a href="services.html" class="block text-brand-blue font-medium hover:text-brand-blue transition-colors duration-300">Services</a></li>
+            <li><a href="about.html" class="block text-gray-800 font-medium hover:text-brand-blue transition-colors duration-300">About</a></li>
+            <li><a href="#contact" class="block text-gray-800 font-medium hover:text-brand-blue transition-colors duration-300">Contact</a></li>
+        </ul>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-brand-blue via-brand-teal to-brand-green text-white py-20">
+            <div class="max-w-6xl mx-auto px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Our Services</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed max-w-4xl mx-auto">
+                    Technology That Empowers—IT Made Simple, Secure, and Effective
+                </p>
+                <p class="text-lg opacity-80 max-w-3xl mx-auto">
+                    We go beyond basic support to make IT your competitive advantage. Every service is delivered with clear communication, fast responses, and a focus on security, productivity, and peace of mind.
+                </p>
+            </div>
+        </section>
+
+        <!-- Core Services -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-8">
+                <div class="grid grid-cols-1 gap-16">
+                    
+                    <!-- Managed IT Services -->
+                    <div class="bg-gradient-to-r from-gray-50 to-blue-50 p-12 rounded-2xl">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <div class="w-16 h-16 mb-6 bg-brand-blue/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                                    </svg>
+                                </div>
+                                <h2 class="text-3xl font-bold mb-4 text-brand-blue">Managed IT Services</h2>
+                                <p class="text-xl text-gray-600 mb-6 font-medium">Worry-Free IT, 24/7</p>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Proactive monitoring & maintenance for all systems</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Guaranteed critical issue response in 1 hour or less</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Onsite and remote support</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Regular system updates before problems occur</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-white p-8 rounded-xl shadow-lg">
+                                    <div class="text-4xl font-bold text-brand-blue mb-2">99.9%</div>
+                                    <div class="text-lg text-gray-600 mb-4">Uptime Guarantee</div>
+                                    <div class="text-sm text-gray-500">With 24/7 proactive monitoring</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Help Desk Support -->
+                    <div class="bg-gradient-to-r from-green-50 to-teal-50 p-12 rounded-2xl">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div class="order-2 lg:order-1 text-center">
+                                <div class="bg-white p-8 rounded-xl shadow-lg">
+                                    <div class="text-4xl font-bold text-brand-green mb-2">1 Hour</div>
+                                    <div class="text-lg text-gray-600 mb-4">Critical Response Time</div>
+                                    <div class="text-sm text-gray-500">Real humans, not bots</div>
+                                </div>
+                            </div>
+                            <div class="order-1 lg:order-2">
+                                <div class="w-16 h-16 mb-6 bg-brand-green/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.5v2m0 15v2M21.5 12h-2m-15 0h-2"/>
+                                    </svg>
+                                </div>
+                                <h2 class="text-3xl font-bold mb-4 text-brand-green">Help Desk Support</h2>
+                                <p class="text-xl text-gray-600 mb-6 font-medium">Human Help, Fast</p>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Unlimited, friendly support from real experts (not bots)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Clear, jargon-free communication</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Easy problem reporting—get issues fixed the first time</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Backup & Recovery -->
+                    <div class="bg-gradient-to-r from-gray-50 to-blue-50 p-12 rounded-2xl">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <div class="w-16 h-16 mb-6 bg-brand-blue/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                </div>
+                                <h2 class="text-3xl font-bold mb-4 text-brand-blue">Data Backup & Recovery</h2>
+                                <p class="text-xl text-gray-600 mb-6 font-medium">Your Data, Always Safe—Always Accessible</p>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Automated, secure daily backups</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Rapid data restoration (minutes, not days)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Disaster recovery planning and execution</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-white p-8 rounded-xl shadow-lg">
+                                    <div class="text-4xl font-bold text-brand-blue mb-2">15 Min</div>
+                                    <div class="text-lg text-gray-600 mb-4">Recovery Time</div>
+                                    <div class="text-sm text-gray-500">Military-grade encryption</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Device & Endpoint Management -->
+                    <div class="bg-gradient-to-r from-teal-50 to-green-50 p-12 rounded-2xl">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div class="order-2 lg:order-1 text-center">
+                                <div class="bg-white p-8 rounded-xl shadow-lg">
+                                    <div class="text-4xl font-bold text-brand-teal mb-2">Zero Trust</div>
+                                    <div class="text-lg text-gray-600 mb-4">Security Approach</div>
+                                    <div class="text-sm text-gray-500">All devices, anywhere</div>
+                                </div>
+                            </div>
+                            <div class="order-1 lg:order-2">
+                                <div class="w-16 h-16 mb-6 bg-brand-teal/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <h2 class="text-3xl font-bold mb-4 text-brand-teal">Mobile Device & Endpoint Management</h2>
+                                <p class="text-xl text-gray-600 mb-6 font-medium">Secure Every Device—Anywhere, Anytime</p>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Centralized control for all company devices (laptops, phones, tablets, desktops)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Remote setup, monitoring, update, and troubleshooting</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Enforced security for BYOD and company-owned devices</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Lost device lock/wipe, compliance policy enforcement (HIPAA, NIST, and more)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Fast onboarding/offboarding with zero-trust security approach</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Services & Migrations -->
+                    <div class="bg-gradient-to-r from-gray-50 to-blue-50 p-12 rounded-2xl">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <div class="w-16 h-16 mb-6 bg-brand-blue/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                                    </svg>
+                                </div>
+                                <h2 class="text-3xl font-bold mb-4 text-brand-blue">Cloud Services & Migrations</h2>
+                                <p class="text-xl text-gray-600 mb-6 font-medium">Modern, Flexible Work—From Anywhere</p>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Google Workspace, Microsoft 365, AWS migration & integration</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Cloud storage and productivity tool setup</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Seamless onboarding for remote/hybrid teams</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-white p-8 rounded-xl shadow-lg">
+                                    <div class="text-4xl font-bold text-brand-blue mb-2">Zero</div>
+                                    <div class="text-lg text-gray-600 mb-4">Downtime Migrations</div>
+                                    <div class="text-sm text-gray-500">Seamless transitions</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IT Strategy & Consulting -->
+                    <div class="bg-gradient-to-r from-green-50 to-teal-50 p-12 rounded-2xl">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div class="order-2 lg:order-1 text-center">
+                                <div class="bg-white p-8 rounded-xl shadow-lg">
+                                    <div class="text-4xl font-bold text-brand-green mb-2">Custom</div>
+                                    <div class="text-lg text-gray-600 mb-4">Technology Roadmaps</div>
+                                    <div class="text-sm text-gray-500">Aligned with your goals</div>
+                                </div>
+                            </div>
+                            <div class="order-1 lg:order-2">
+                                <div class="w-16 h-16 mb-6 bg-brand-green/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                    </svg>
+                                </div>
+                                <h2 class="text-3xl font-bold mb-4 text-brand-green">IT Strategy & Consulting</h2>
+                                <p class="text-xl text-gray-600 mb-6 font-medium">Plan for Growth. Avoid Surprises.</p>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Custom technology roadmaps</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Budget and ROI analysis</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Project management (hardware, software, cloud, or network upgrades)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Vendor selection and negotiation support</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Management -->
+                    <div class="bg-gradient-to-r from-teal-50 to-green-50 p-12 rounded-2xl">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <div class="w-16 h-16 mb-6 bg-brand-teal/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2M7 4a1 1 0 001 1h8a1 1 0 001-1M7 4V2M17 4v2M5 9h14l-1 10a1 1 0 01-1 1H7a1 1 0 01-1-1L5 9zM9 12h6M10 15h4"/>
+                                    </svg>
+                                </div>
+                                <h2 class="text-3xl font-bold mb-4 text-brand-teal">Social Media Management</h2>
+                                <p class="text-xl text-gray-600 mb-6 font-medium">Grow Your Presence, Reach More Supporters</p>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Content planning, creation, and scheduling for nonprofits and businesses</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Audience insights, analytics, and engagement</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span>Setup and optimization of all major platforms</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-white p-8 rounded-xl shadow-lg">
+                                    <div class="text-4xl font-bold text-brand-teal mb-2">All</div>
+                                    <div class="text-lg text-gray-600 mb-4">Major Platforms</div>
+                                    <div class="text-sm text-gray-500">Optimized for engagement</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialized Solutions -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Specialized Solutions by Industry</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Tailored IT services designed for your unique challenges and compliance requirements</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- For Nonprofits -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-brand-green">
+                        <div class="w-16 h-16 mb-6 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-brand-green text-center">For Nonprofits</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span>Grant compliance & donor platform support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span>Secure volunteer onboarding and workforce management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-brand-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span>Fundraising integration with tech solutions</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- For Growing Teams/Businesses -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-brand-blue">
+                        <div class="w-16 h-16 mb-6 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-brand-blue text-center">For Growing Teams/Businesses</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span>Rapid device setup and remote access</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span>Support for hiring, onboarding, and scaling up securely</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span>Device management for in-office & remote staff</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- For Regulated & Government Organizations -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-brand-teal">
+                        <div class="w-16 h-16 mb-6 bg-brand-teal/10 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-8 h-8 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-brand-teal text-center">For Regulated & Government Organizations</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span>Audit prep and compliance management (HIPAA, NIST, and more)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span>Ongoing security training for your team</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-brand-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span>Automated documentation for regulatory peace of mind</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose AtomicD Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Why Choose AtomicD Solutions?</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Clear differentiators that make us the right IT partner for your organization</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-brand-blue/10 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Lightning-Fast Support</h3>
+                        <p class="text-gray-600 text-sm">1-hour critical response, always a real person.</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-brand-green/10 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Security & Compliance First</h3>
+                        <p class="text-gray-600 text-sm">Certified, credentialed, and up-to-date with the latest regulations.</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-brand-teal/10 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Specialized Expertise</h3>
+                        <p class="text-gray-600 text-sm">Decades of nonprofit/government experience, deep empathy for mission-driven orgs.</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-brand-green/10 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">True Partnership</h3>
+                        <p class="text-gray-600 text-sm">We treat your business and mission as our own.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Common questions about our IT services, answered clearly and honestly</p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-brand-blue">
+                        <h3 class="text-xl font-semibold mb-4 text-brand-blue">What makes AtomicD Solutions different from other IT providers?</h3>
+                        <p class="text-gray-700 leading-relaxed">We offer lightning-fast support (guaranteed 1-hour response for critical issues), certified security and compliance expertise, and a real partnership approach. You always work with someone who knows your business—no bouncing around call centers.</p>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-brand-green">
+                        <h3 class="text-xl font-semibold mb-4 text-brand-green">Can you support nonprofits, government contractors, and businesses with specific compliance needs?</h3>
+                        <p class="text-gray-700 leading-relaxed">Yes! We have deep experience with nonprofits, government contracts, and regulated industries. We help with grant compliance, HIPAA, NIST, and more—plus we tailor our services to fit your unique policies and workflows.</p>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-brand-teal">
+                        <h3 class="text-xl font-semibold mb-4 text-brand-teal">What is managed IT, and do I really need it?</h3>
+                        <p class="text-gray-700 leading-relaxed">Managed IT means we proactively monitor, maintain, and secure all your tech—so you don't have to wait for problems before getting help. Most organizations save money, reduce downtime, and get more focus by using managed services.</p>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-brand-blue">
+                        <h3 class="text-xl font-semibold mb-4 text-brand-blue">How do you handle mobile device and endpoint management?</h3>
+                        <p class="text-gray-700 leading-relaxed">We use secure, industry-leading tools to manage all your devices. Whether staff are onsite, remote, or using personal (BYOD) hardware, we keep everything updated, encrypted, and easily supportable—including remote wipe and lock for lost or stolen devices.</p>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-brand-green">
+                        <h3 class="text-xl font-semibold mb-4 text-brand-green">How quickly can I get help if something breaks?</h3>
+                        <p class="text-gray-700 leading-relaxed">For critical issues, we start working within one hour (often faster). Most problems are resolved the same day, and you'll always reach an experienced human, not an automated system.</p>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-brand-teal">
+                        <h3 class="text-xl font-semibold mb-4 text-brand-teal">Can you help us move to the cloud, or improve our remote work setup?</h3>
+                        <p class="text-gray-700 leading-relaxed">Absolutely! We handle everything from initial planning to migration and staff onboarding for Google Workspace, Microsoft 365, AWS, and more. We'll make your transition seamless, secure, and stress-free.</p>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-brand-blue">
+                        <h3 class="text-xl font-semibold mb-4 text-brand-blue">What if we already have some in-house IT?</h3>
+                        <p class="text-gray-700 leading-relaxed">We love working collaboratively! We can supplement your current team, take on specialized tasks, or provide backup/help desk coverage—you choose how much or how little help you need.</p>
+                    </div>
+
+                    <!-- FAQ Item 8 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-brand-green">
+                        <h3 class="text-xl font-semibold mb-4 text-brand-green">Is my data safe with AtomicD Solutions?</h3>
+                        <p class="text-gray-700 leading-relaxed">Yes—security is our top priority. All backups are encrypted, monitored, and tested regularly. We follow best practices for security and compliance, and work with trusted technology partners only.</p>
+                    </div>
+
+                    <!-- FAQ Item 9 -->
+                    <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-brand-teal">
+                        <h3 class="text-xl font-semibold mb-4 text-brand-teal">Do you provide custom service packages?</h3>
+                        <p class="text-gray-700 leading-relaxed">Yes—every business is different. We'll tailor our offerings to your needs, budget, and team size. Book a free call and we'll build a plan together!</p>
+                    </div>
+
+                    <!-- Final FAQ CTA -->
+                    <div class="bg-gradient-to-r from-brand-blue to-brand-teal text-white rounded-xl p-8 text-center">
+                        <h3 class="text-2xl font-semibold mb-4">Have more questions?</h3>
+                        <p class="text-lg mb-6 opacity-90">Contact us or book a chat—we're always happy to explain things in plain English.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="#contact" class="bg-white text-brand-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">Contact Us</a>
+                            <a href="#contact" class="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-300">Book a Free Call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-br from-brand-blue via-brand-teal to-brand-green text-white text-center">
+            <div class="max-w-4xl mx-auto px-8">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Make Your IT Simple—and Powerful?</h2>
+                <p class="text-xl mb-8 opacity-90 leading-relaxed max-w-2xl mx-auto">See how much time, money, and stress you could save with the right IT partner.</p>
+                <a href="#contact" class="bg-white text-brand-blue px-10 py-5 rounded-lg font-semibold text-xl hover:bg-gray-100 transition-colors duration-300 inline-block">Book a Free Call</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Get Started Today</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">Ready to experience stress-free IT? Let's talk about your needs and see how we can help.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-brand-blue">Email Us</h3>
+                    <p class="text-gray-600 mb-4">Send us a message about your IT needs</p>
+                    <a href="mailto:info@atomicdsolutions.com" class="text-brand-blue font-semibold hover:underline">info@atomicdsolutions.com</a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-brand-blue">Call Us</h3>
+                    <p class="text-gray-600 mb-4">Speak directly with our team</p>
+                    <a href="tel:5551234567" class="text-brand-blue font-semibold hover:underline">(555) 123-4567</a>
+                </div>
+            </div>
+            
+            <div class="bg-white p-12 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-900">Schedule a Free Consultation</h3>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Let's discuss your current challenges and how our IT services can help your organization thrive. No obligation, just honest advice.</p>
+                <a href="#contact" class="bg-brand-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-blue/90 transition-colors duration-300 inline-block">Book Your Free Call</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-brand-green">Contact Info</h4>
+                    <p class="mb-2 opacity-80">Email: info@atomicdsolutions.com</p>
+                    <p class="opacity-80">Phone: (555) 123-4567</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-brand-green">Services</h4>
+                    <p class="mb-2 opacity-80">Managed IT Services</p>
+                    <p class="mb-2 opacity-80">Mobile Device Management</p>
+                    <p class="opacity-80">Cloud Services & Migrations</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-brand-green">Why Choose AtomicD</h4>
+                    <p class="mb-2 opacity-80">Lightning-Fast Support</p>
+                    <p class="mb-2 opacity-80">Security & Compliance First</p>
+                    <p class="opacity-80">True Partnership Approach</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="opacity-70">&copy; 2024 AtomicD Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
